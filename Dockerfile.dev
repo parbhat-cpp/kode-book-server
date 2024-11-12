@@ -1,0 +1,13 @@
+FROM node:21-alpine
+
+WORKDIR /app
+COPY package*.json .
+
+RUN npm install
+COPY . .
+
+RUN npm install -g typescript
+
+EXPOSE 5000 8080
+
+CMD ["npm", "run", "dev"]

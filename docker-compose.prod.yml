@@ -1,0 +1,12 @@
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "5000:5000"
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
