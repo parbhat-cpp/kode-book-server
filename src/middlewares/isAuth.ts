@@ -26,7 +26,7 @@ export const isAuth = (req: VerifiedRequest, res: Response, next: NextFunction) 
         req.user = decoded;
         next();
     } catch (error) {
-        apiResponse.error = error;
+        apiResponse.error = error?.toString();
         apiResponse.status_code = httpStatus.INTERNAL_SERVER_ERROR;
 
         res.status(httpStatus.INTERNAL_SERVER_ERROR).send(apiResponse);

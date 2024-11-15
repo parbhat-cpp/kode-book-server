@@ -1,12 +1,12 @@
 import express from 'express';
-import userRoute from './user.route';
+import profileRoute from './profile.route';
 
 const router = express.Router();
 
 const routes = [
     {
-        path: '/user',
-        route: userRoute
+        path: '/profile',
+        route: profileRoute
     }
 ];
 
