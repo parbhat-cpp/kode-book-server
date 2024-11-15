@@ -18,4 +18,5 @@ export default {
     JWT_SECRET: process.env.SUPABASE_JWT_SECRET,
     BASE_URL: process.env.BASE_URL,
     SOCKET_BASE_URL: process.env.SOCKET_BASE_URL,
+    DATABASE_URL: process.env.DATABASE_URL,
 }
