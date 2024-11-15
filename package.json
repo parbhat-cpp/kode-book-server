@@ -5,8 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsc",
-    "start": "node dist/index.js",
-    "dev": "nodemon src/index.ts"
+    "start": "node ./dist/index.js",
+    "dev": "nodemon --legacy-watch ./src/index.ts"
   },
   "author": "Parbhat Sharma",
   "license": "ISC",
@@ -14,10 +14,13 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.36.3",
     "express": "^4.21.1",
     "http-status": "^2.0.0",
     "jsonwebtoken": "^9.0.2",
     "kodebook-server": "file:",
+    "pg": "^8.13.1",
+    "postgres": "^3.4.5",
     "socket.io": "^4.8.1"
   },
   "devDependencies": {
@@ -26,10 +29,13 @@
     "@types/http-status": "^0.2.30",
     "@types/jsonwebtoken": "^9.0.7",
     "@types/node": "^22.9.0",
+    "@types/pg": "^8.11.10",
     "@types/socket.io": "^3.0.1",
     "concurrently": "^9.1.0",
+    "drizzle-kit": "^0.28.1",
     "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
     "typescript": "^5.6.3"
   }
 }
