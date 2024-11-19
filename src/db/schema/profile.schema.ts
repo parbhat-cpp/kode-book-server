@@ -6,4 +6,6 @@ export const profilesTable = pgTable("profiles", {
     username: text().unique().notNull(),
     full_name: text(),
     avatar_url: text(),
+    works_at: text(),
+    location: text(),
 });

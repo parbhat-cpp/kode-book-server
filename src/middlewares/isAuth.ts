@@ -6,6 +6,7 @@ import httpStatus from 'http-status';
 import jwt from 'jsonwebtoken';
 import config from "../common/config";
 
+// middleware to verify users
 export const isAuth = (req: VerifiedRequest, res: Response, next: NextFunction) => {
     const apiResponse = new ApiResponse();
 

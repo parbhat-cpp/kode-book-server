@@ -4,6 +4,7 @@ import { resolve } from "path";
 const ENV_FILE_PATH = resolve('.env');
 const isEnvFound = dotenv.config({ path: ENV_FILE_PATH });
 
+// throw error when no .env file found
 if (isEnvFound.error) {
     throw new Error("Cannot find .env file");
 }
